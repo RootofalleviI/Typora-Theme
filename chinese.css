@@ -12,11 +12,11 @@
 @include-when-export url(https://raw.githubusercontent.com/slashfoo/lmweb/master/style/latinmodern-mono-light.css);
 
 html {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 body {
-    font-family: "STIX2Text", "Times New Roman", "serif";
+    font-family: "HYXiXingKaiJ", "Times New Roman", "serif";
 }
 
 @font-face {
@@ -89,7 +89,7 @@ body {
 
 @media print {
     html { 
-        font-size: 12px;
+        font-size: 14px;
     }
     table,
     pre {
@@ -98,10 +98,11 @@ body {
 }
 
 #write {
-    font-family: "STIX2Text", "Times New Roman", "serif";
+    font-family: "HYXiXingKaiJ", "Times New Roman", "serif";
     line-height: 1.5em;
     padding-top: 2%;
-    max-width: 1050px;
+    padding-left: 20%;
+    padding-right: 20%
     /* padding: 10%;
     padding-top: 5%;
     */
@@ -124,7 +125,7 @@ a, a:visited {
     color: #a00;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     line-height: 1.5em;
     /* margin-bottom: 1em;
@@ -132,9 +133,8 @@ h1, h2, h3, h4, h5 {
 }
 
 h1  {   /* Chapter */
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: normal;
-    color: black;
 }
 
 #write h1  {
@@ -142,7 +142,7 @@ h1  {   /* Chapter */
 }
 
 h2 {    /* Section */
-    font-size: 1.5em;
+    font-size: 1.9em;
     font-weight: normal;
     text-align: center;
 }
@@ -159,52 +159,33 @@ h2:after{
 
 h3 {    /* Subsection */
     font-size: 1.6em;
-    font-weight: normal;
-    text-align: center;
 }
 
-h4::before {
-    color: #406396;
-    content: '\2694';
-    margin-right: 0.5em;
+h3 + h4 {
+    margin-top: -0.3em;
 }
 
 h4 {    /* Subsubsection */
-    color: #406396;
     font-size: 1.3em;
-    font-weight: bold;
 }
-
-/*
-h4 + p {
-    margin-top: -0.6em;
-}
-*/
 
 h5  {   /* NULL */
-    color: teal;
     font-size: 1em;
-}
-
-h5::before {
-    color: teal;
-    content: '\2618';
-    margin-right: 0.5em;
-}
-
-h5 + p {
-    margin-top: -0.6em;
 }
 
 h6 {	/* Warning */
     font-size: 1em;
-    margin: 0;
+    color: #ff6060;
 }
 
 p {
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: justify;
+}
+
+.mathjax-block + p {
+    margin-top: 0em;
 }
 
 /*
@@ -232,8 +213,6 @@ pre, code {
 code {
     color: rgb(100, 20, 255);
     font-style: normal;
-    background: beige;
-    font-size: 0.9em;
 }
 
 .footnotes {
@@ -278,7 +257,7 @@ a.md-toc-inner {
 
 #typora-source .CodeMirror-lines {
     -webkit-font-smoothing: auto;
-    max-width: 1000px;
+    max-width:10600px;
 }
 
 .md-def-name:before,
@@ -409,12 +388,16 @@ blockquote {
     color: #7a7a7a;
 }*/
 
-/* li .mathjax-block, li p {
-    margin: inherit !important;
-} */
-
-li .mathjax-block {
-    margin-top: 1em;
-    margin-bottom: 1em;
+.mathjax-block {
+    margin-bottom: 0px !important;
 }
 
+li .mathjax-block, li p {
+    margin: inherit !important;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
