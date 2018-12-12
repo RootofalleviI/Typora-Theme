@@ -30,6 +30,7 @@ html {
 /* Writing Area */
 #write {
     line-height: 140%;
+    font-size: 12pt;
     font-family: "Computer Modern Serif", "Times New Roman", "serif" !important;
 }
 
@@ -51,18 +52,18 @@ html {
     #write {
         padding: 15mm 20mm;
         margin: 2% auto;
-        /* max-width: 215.9mm; */
+        max-width: 215.9mm;
         background: white;
     }
 }
 
-/* @media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
     #write {
         border: 1px #D3D3D3 dotted;
         border-radius: 5px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
-} */
+}
 
 /*********************************** Export ***********************************/
 @media print {
