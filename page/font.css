@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Computer Modern Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: local('CMU Serif Roman'),
+        url('./font/cmunrm.ttf') format('woff')
+}
+
+@font-face {
+    font-family: 'Computer Modern Serif';
+    font-style: italic;
+    font-weight: normal;
+    src: local('CMU Serif Roman Italic'),
+        url('./font/cmunti.ttf') format('woff')
+}
+
+@font-face {
+    font-family: 'Computer Modern Serif';
+    font-style: normal;
+    font-weight: bold;
+    src: local('CMU Serif Roman Bold'),
+        url('./font/cmunbx.ttf') format('woff')
+}
+
+@font-face {
+    font-family: 'Computer Modern Serif';
+    font-style: italic;
+    font-weight: bold;
+    src: local('CMU Serif Roman BoldItalic'),
+        url('./font/cmunbi.ttf') format('woff')
+}
+
+@font-face {
+    font-family: 'Latin Modern Math';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Latin Modern Math Regular'),
+        url('./font/lmmath-regular.otf') format('woff')
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-weight: normal;
+    font-style: normal;
+    src: local('CMU Typewriter Text'),
+        url('./font/cmuntt.ttf') format('woff');
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-weight: bold;
+    font-style: normal;
+    src: local('CMU Typewriter Text Bold'),
+        url('./font/cmuntb.ttf') format('woff')
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-weight: normal;
+    font-style: italic;
+    src: local('CMU Typewriter Text Italic'),
+        url('./font/cmunit.ttf') format('woff')
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-weight: bold;
+    font-style: italic;
+    src: local('CMU Typewriter Text BoldItalic'),
+        url('./font/cmuntx.ttf') format('woff')
+}

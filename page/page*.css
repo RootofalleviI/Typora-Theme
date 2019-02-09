@@ -1,0 +1,431 @@
+/*********************************** License ***********************************
+Theme: page.css
+Author: David Duan
+Date: Dec, 2018
+Version: Beta v0.1
+******************************************************************************/
+/*********************************** Fonts ***********************************/
+@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');
+
+/*********************************** Global ***********************************/
+
+/* Root */
+:root {
+    --side-bar-bg-color: white;
+    --window-border: black;
+    --search-select-bg-color: #575c61;
+    --active-file-bg-color: #f1f4f5;
+    --item-hover-bg-color: #f1f4f5;
+    --item-hover-text-color: black;
+    --control-text-color: #555;
+}
+
+/* Document */
+html {
+    font-size: 10pt;
+    font-family: "Computer Modern Serif", "Times New Roman", "serif" !important;
+}
+
+/* Writing Area */
+#write {
+    line-height: 140%;
+    font-size: 12pt;
+    font-family: "Computer Modern Serif", "Times New Roman", "serif" !important;
+}
+
+/* Page size */
+@page {
+    size: letter;
+}
+
+/* Selection */
+*.in-text-selection,
+::selection,
+.CodeMirror-selected {
+    background: var(--search-select-bg-color);
+    text-shadow: none;
+}
+/*********************************** Editor ***********************************/
+@media screen {
+    #write {
+        background: white;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #write {
+        padding: 15mm 20mm;
+        margin: 2% auto;
+        max-width: 215.9mm;
+        background: white;
+        border: 1px #D3D3D3 dotted;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen {
+    pre.md-meta-block {
+        color: #8c8b8b;
+        background-color: #f1f4f5;
+        margin-bottom: 2em;
+        display: none;
+    }
+}
+
+/*********************************** Export ***********************************/
+@media print {
+
+    @page {
+        size: letter;
+    }
+
+    hr {
+        visibility: hidden;
+        page-break-after: always;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    hr + h5 {
+        margin-top: 0 !important;
+    }
+
+    hr + h6 {
+        margin-top: 0 !important;
+    }
+
+    .md-toc-inner {
+        margin-left: 0 !important;
+    }
+
+    #write {
+        font-size: 12pt;
+    }
+
+    #write h4 {
+        margin-top: 0 !important;
+    }
+}
+
+/* toc */
+@media print {
+    .md-toc {
+        margin-top: 4%;
+        margin-left: 0;
+    }
+
+    .md-toc::before {
+        content: "Contents";
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    .md-toc-h1,
+    .md-toc-h2,
+    .md-toc-h3 {
+        display: none;
+    }
+
+    .md-toc-h4 {
+        margin-top: 0 !important;
+        font-weight: bold;
+        margin-left: 0;
+    }
+
+    .md-toc-h5 {
+        margin-left: 2rem;
+    }
+
+    .md-toc-h6 {
+        margin-left: 4rem;
+    }
+
+    .md-toc-inner {
+        font-size: 12pt !important;
+        margin: 0.5em !important;
+        color: blue !important;
+    }
+
+    .md-toc-h4:before {
+        color: blue !important;
+    }
+
+    .md-toc-h5:before {
+        color: blue !important;
+    }
+
+    .md-toc-h6:before {
+        color: blue !important;
+    }
+}
+
+/*********************************** Header ***********************************/
+/* Title */
+#write h1 {
+    font-size: 1.6em;
+    font-weight: normal;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Subtitle */
+#write h2 {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: normal;
+    font-style: italic;
+    color: #a5a5a5;
+    margin: 0.4em auto 0.1em auto;
+}
+
+/* Author & Date */
+#write h3 {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: normal;
+    font-style: italic;
+    color: dimgray;
+    margin: 0 auto;
+}
+
+/*********************************** Elements ***********************************/
+a, a:visited {
+    color: #a00;
+}
+
+p {
+    margin: 1rem auto;
+    text-align: left;
+    /* text-align: justify; */
+    orphans: 2;
+    widows: 2;
+}
+
+hr {
+    border-top: 3px double #8c8b8b;
+    margin: 2em auto;
+}
+
+mark {
+    background-color: #FFFE7A !important;
+}
+
+/* strong em {
+    background-color: #EDEDED;
+    font-style: normal;
+}
+
+strong {
+
+} */
+
+/* toc */
+a.md-toc-inner {
+    font-size: 11pt !important;
+}
+
+.md-toc-inner {
+    margin-left: 0 !important;
+}
+
+.md-toc-h1,
+.md-toc-h2,
+.md-toc-h3 {
+    display: none;
+}
+
+.md-toc-4 {
+    margin-left: 0;
+}
+
+.md-toc-h4 a.md-toc-inner {
+    font-weight: bold !important;
+}
+
+.md-toc-h5 {
+    margin-left: 2rem;
+}
+
+.md-toc-h6 {
+    margin-left: 4rem;
+}
+
+/* Footnote */
+.footnotes {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-left: 1em;
+}
+
+.footnotes-area {
+    font-style: italic;
+    margin: 0.2rem;
+}
+
+.footnote-line {
+    font-size: 0.9em;
+}
+
+.reversefootnote {
+    margin-left: 5px;
+}
+
+sup.md-footnote {
+    background-color: initial;
+    color: inherit;
+}
+
+td, th {
+    border: 1px solid;
+    padding-left: 1ch;
+    padding-right: 1ch;
+}
+
+th {
+    border-bottom: 0;
+    padding-top: 2px;
+    background: #575c61;
+    border-color: #333;
+    color: #f3f3f3;
+}
+
+.task-list-item {
+    padding-left: 0.5em;
+}
+
+.md-header {
+    font-size: inherit !important;
+}
+
+li .mathjax-block {
+    margin: 1em auto;
+}
+
+li > p {
+    margin: 0 auto;
+}
+
+li {
+    margin: 0.5rem auto;
+}
+
+ol li li {
+    list-style-type: lower-alpha;
+}
+
+ol li li li {
+    list-style-type: lower-roman;
+}
+
+/*********************************** Heading ***********************************/
+
+#write h4{
+    font-size: 1.4em;
+    margin-top: 2em;
+}
+
+#write h5 {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+}
+
+#write h6 {
+    font-size: 1em;
+    margin-top: 1.2em;
+}
+
+#write h4 + h5,
+#write h5 + h6 {
+    margin-top: 1em !important;
+}
+
+#write h4 + p {
+    margin-top: 1.5em !important;
+}
+
+#write h4 + ul {
+    margin-top: 1.5em !important;
+}
+
+#write h4 + ol {
+    margin-top: 1.5em !important;
+}
+/*********************************** Code ***********************************/
+
+#write pre {
+    font-family: "Computer Modern Typewriter", monospace;
+    font-size: 0.95em;
+}
+
+#write code {
+    font-family: "Computer Modern Typewriter", monospace;
+    font-size: 0.95em;
+}
+
+#write .md-fences {
+    background: white;
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+#write .CodeMirror-linenumber {
+    font-size: 0.9em;
+    min-width: 25px;
+}
+
+
+/************/
+/* Abstract */
+/************/
+
+/* #write blockquote {
+    padding: 0.25em 30px;
+    margin: 13px auto;
+    width: calc(100% - 26px);
+    text-align: center;
+} */
+
+/* blockquote::before {
+    font-weight: bold;
+    content: "Abstract";
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 0.9em;
+    padding: 0.25em;
+    margin-left: 1em;
+    margin-right: 1em;
+    position: relative;
+    color: black;
+} */
+
+blockquote {
+    border-left: 5px solid #dddddd;
+    color: dimgray;
+    margin: 0 -25px;
+    padding: 0 20px;
+}
+
+/* System */
+
+.file-list-item-summary {
+    height: 36px;
+  }
+
+.file-list-item {
+  padding-top: 18px !important;
+  padding-bottom: 18px;
+}
+
+#sidebar-loading-template.file-list-item {
+  padding-top: 0 !important;
+}
+/*********************************** License ***********************************
+Theme: page.css
+Author: David Duan
+Date: Dec, 2018
+Version: Beta v0.1
+******************************************************************************/

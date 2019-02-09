@@ -1,0 +1,25 @@
+/************/
+/* Abstract */
+/************/
+
+#write blockquote {
+  padding: 0.25em 30px;
+  margin: 13px auto;
+  width: calc(100% - 26px);
+  text-align: center;
+}
+
+blockquote::before {
+  font-weight: bold;
+  content: "Abstract";
+}
+
+blockquote {
+  font-style: normal;
+  font-size: 0.9em;
+  padding: 0.25em;
+  margin-left: 1em;
+  margin-right: 1em;
+  position: relative;
+  color: black;
+}

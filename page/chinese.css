@@ -1,5 +1,11 @@
+/*********************************** License ***********************************
+Theme: page.css
+Author: David Duan
+Date: Dec, 2018
+Version: Beta v0.1
+******************************************************************************/
 /*********************************** Fonts ***********************************/
-@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');
+/* @import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css'); */
 
 /*********************************** Global ***********************************/
 
@@ -24,7 +30,8 @@ html {
 #write {
     line-height: 140%;
     font-size: 12pt;
-    font-family: "Computer Modern Serif", "Times New Roman", "serif" !important;
+    /* font-family: "Computer Modern Serif", "Times New Roman", "serif" !important; */
+    font-family: "STXihei", "serif" !important;
 }
 
 /* Page size */
@@ -37,25 +44,35 @@ html {
 ::selection,
 .CodeMirror-selected {
     background: var(--search-select-bg-color);
-    color: var(--search-select-text-color) !important;
     text-shadow: none;
 }
 /*********************************** Editor ***********************************/
 @media screen {
     #write {
-        padding: 15mm 20mm;
-        margin: 2% auto;
-        max-width: 215.9mm;
         background: white;
     }
 }
 
 @media screen and (min-width: 800px) {
     #write {
+        padding: 15mm 20mm;
+        margin: 2% auto;
+        max-width: 215.9mm;
+        background: white;
         border: 1px #D3D3D3 dotted;
         border-radius: 5px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
+}
+
+@media screen {
+    pre.md-meta-block {
+        color: #8c8b8b;
+        background-color: #f1f4f5;
+        margin-bottom: 2em;
+        display: none;
+    }
+
 }
 
 /*********************************** Export ***********************************/
@@ -96,7 +113,7 @@ html {
 
     .md-toc-h4 {
         font-weight: bold;
-        margin-left: 0rem;
+        margin-left: 0;
     }
 
     .md-toc-h5 {
@@ -171,7 +188,6 @@ hr {
 
 /* toc */
 a.md-toc-inner {
-    color: var(--text-color);
     font-size: 11pt !important;
 }
 
@@ -287,7 +303,7 @@ ol li li li {
 
 #write h4 + h5,
 #write h5 + h6 {
-    margin-top: 0 !important;
+    margin-top: 1em !important;
 }
 /*********************************** Numbering ***********************************/
 body {counter-reset: h4}
@@ -349,12 +365,12 @@ body {counter-reset: h4}
 /*********************************** Code ***********************************/
 
 #write pre {
-    font-family: "Computer Modern Typewriter";
-    font-size: 0.9em;
+    font-family: "Computer Modern Typewriter", monospace;
+    font-size: 0.95em;
 }
 
 #write code {
-    font-family: "Computer Modern Typewriter";
+    font-family: "Computer Modern Typewriter", monospace;
     font-size: 0.95em;
 }
 
@@ -410,4 +426,9 @@ blockquote {
   #sidebar-loading-template.file-list-item {
     padding-top: 0 !important;
   }
-  
+/*********************************** License ***********************************
+Theme: page.css
+Author: David Duan
+Date: Dec, 2018
+Version: Beta v0.1
+******************************************************************************/

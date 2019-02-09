@@ -1,0 +1,84 @@
+/***********
+ * Theme for Typora
+ * David Duan, 2019
+ * V1.0
+ ***********/
+
+@import url('article*.css');
+
+/*********************************** Numbering ***********************************/
+body {counter-reset: h4}
+#write h4 {counter-reset: h5}
+#write h5 {counter-reset: h6}
+
+#write h4:before {
+  counter-increment: h4;
+  content: counter(h4);
+  margin-right: 25px;
+}
+
+#write h5:before {
+  counter-increment: h5;
+  content: counter(h4) "." counter(h5);
+  margin-right: 25px;
+}
+
+#write h6::before {
+  counter-increment: h6;
+  content: counter(h4) "." counter(h5) "." counter(h6);
+  margin-right: 25px;
+}
+
+.md-toc-content {
+  counter-reset: h4toc
+}
+
+.md-toc-h4 {
+  counter-reset: h5toc
+}
+
+.md-toc-h5 {
+  counter-reset: h6toc
+}
+
+.md-toc-h4:before {
+  color: #a00;
+  font-weight: bold;
+  counter-increment: h4toc;
+  content: counter(h4toc);
+  margin-right: 15px;
+}
+
+.md-toc-h5:before {
+  color: #a00;
+  counter-increment: h5toc;
+  content: counter(h4toc) "." counter(h5toc);
+  margin-right: 15px;
+}
+
+.md-toc-h6:before {
+  color: #a00;
+  counter-increment: h6toc;
+  content: counter(h4toc) "." counter(h5toc) "." counter(h6toc);
+  margin-right: 15px;
+}
+
+@media print {
+  .md-toc-h4:before {
+    color: blue !important;
+  }
+
+  .md-toc-h5:before {
+    color: blue !important;
+  }
+
+  .md-toc-h6:before {
+    color: blue !important;
+  }
+}
+
+/***********
+ * Theme for Typora
+ * David Duan, 2019
+ * V1.0
+ ***********/

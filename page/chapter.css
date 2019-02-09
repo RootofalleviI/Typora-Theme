@@ -1,0 +1,6 @@
+@media print {
+  h2 {
+    font-weight: bold;
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+/***************************/
+/* Defines h1 ~ h6 Heading */
+/***************************/
+@media print {
+  h1, h2, h3, h4, h5, h6 {
+    white-space: pre;
+  }
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5, 
+#write h6 {
+  width: 100%;
+  line-height: 120%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: normal;
+  color: black;
+  margin-top: 0;
+}
+
+/* Do not use this */
+h1 {  
+  color: red; 
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Part page */
+h2 {   
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Break on each article heading */
+/* No extra line height for h3 */
+@media print {
+  * h3 {
+    line-height: 100%;
+    page-break-before: always;
+  }
+}
+
+/* Article title */
+h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  text-align: center;
+} 
+
+/* \section{} */
+h4 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 0.85em;
+}
+
+/* \subsection{} */
+h5 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+}
+
+/* \subsubsection{} */
+h6 {
+  font-size: 1.0em;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+}
+
+h4 > h5,
+h5 > h6,
+h4 > h6 {
+  margin-top: 0;
+}

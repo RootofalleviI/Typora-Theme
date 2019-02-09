@@ -1,0 +1,48 @@
+@media print {
+  #cover {
+      margin-top: 10%;
+  }
+
+  #cover #pic {
+      margin: 5% auto;
+      text-align: center;
+      line-height: 1.5em;
+  }
+
+  #cover #title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2em;
+      line-height: 1.5em;
+  }
+
+  #cover #hr {
+      border: 0;
+      border-top: 3px double black;
+  }
+
+  #cover #category {
+      margin-top: 5%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      color: dimgray;
+  }
+
+  #cover #author {
+      margin-top: 50%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3em;
+      line-height: 1.5em;
+  }
+
+  #cover #date {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3em;
+      line-height: 1.5em;
+      page-break-after: always;
+  }
+}

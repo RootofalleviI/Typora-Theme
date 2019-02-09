@@ -1,0 +1,14 @@
+
+
+.file-list-item-summary {
+  height: 36px;
+}
+
+.file-list-item {
+  padding-top: 18px !important;
+  padding-bottom: 18px;
+}
+
+#sidebar-loading-template.file-list-item {
+  padding-top: 0 !important;
+}
