@@ -61,18 +61,26 @@ html {
 }
 
 /************* Export *************/
+@page {
+  size: letter;
+}
+
 @media print {
   hr {
     visibility: hidden;
-    page-break-before: always;
+    page-break-after: always;
     margin: 0;
     padding: 0;
   }
 
   hr + h4,
   hr + h5,
-  hr + h4 {
-    margin-top: 0;
+  hr + h6 {
+    margin-top: 0 !important;
+  }
+
+  #write h4 {
+    margin-top: 0 !important;
   }
 
   .md-toc-inner {
@@ -256,7 +264,7 @@ ol li li li {
 }
 
 blockquote {
-    border-left: 5px solid #dddddd;
+    border-left: 5px dashed #dddddd;
     color: dimgray;
     margin: 0 -25px;
     padding: 0 20px;
