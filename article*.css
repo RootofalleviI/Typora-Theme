@@ -198,7 +198,7 @@ mark {
 }
 
 .footnotes {
-    font-size: 1.0rem;
+    font-size: 10pt;
     font-style: italic;
     margin-left: 1em;
 }
@@ -209,7 +209,7 @@ mark {
 }
 
 .footnote-line {
-    font-size: 1.0em;
+    font-size: 10pt;
 }
 
 .reversefootnote {
@@ -264,7 +264,8 @@ ol li li li {
 }
 
 blockquote {
-    border-left: 5px dashed #dddddd;
+    border-left: 5px solid #dddddd;
+    font-style: italic;
     color: dimgray;
     margin: 0 -25px;
     padding: 0 20px;
