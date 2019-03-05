@@ -5,6 +5,7 @@
  ***********/
 
 @import url('article*.css');
+@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');
 
 /*********************************** Numbering ***********************************/
 body {counter-reset: h4}

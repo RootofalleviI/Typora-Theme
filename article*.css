@@ -80,6 +80,7 @@ html {
   }
 
   #write h4 {
+    /* page-break-before: always; */
     margin-top: 0 !important;
   }
 
@@ -122,6 +123,11 @@ html {
 
   .md-toc-h6 {
     margin-left: 4rem;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
   }
 }
 
@@ -184,8 +190,6 @@ a, a:visited {
 p {
     margin: 1rem auto;
     text-align: left;
-    orphans: 3;
-    widows: 3;
 }
 
 hr {
@@ -273,17 +277,18 @@ blockquote {
 
 /* Use this blockquote if you prefer "abstract" */
 /* #write blockquote {
-    padding: 0.25em 30px;
-    margin: 13px auto;
-    width: calc(100% - 26px);
+    padding: 0.25em 10px;
+    margin: 4px auto;
+    width: calc(100% - 8px);
     text-align: center;
     font-style: normal;
     font-size: 0.9em;
-    padding: 0.25em;
-    margin-left: 1em;
-    margin-right: 1em;
     position: relative;
     color: black;
+}
+
+#write blockquote li{
+    text-align: left;
 }
 
 #write blockquote::before {
