@@ -1,10 +1,12 @@
 /***********
  * Theme for Typora
  * David Duan, 2019
- * V1.0
+ * V2.0
  ***********/
 
 /************* Root *************/
+
+/* The following URL contains Computer Modern fonts. */
 @import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css');
 
 :root {
@@ -15,6 +17,18 @@
   --item-hover-bg-color: #f1f4f5;
   --item-hover-text-color: black;
   --control-text-color: #555;
+
+  --ff-serif: "Computer Modern Serif", "Times New Roman", "serif";
+}
+
+html {
+  font-size: 10pt;
+  font-family: var(--ff-serif);
+}
+
+#write {
+  font-size: 12pt;
+  line-height: 140%;
 }
 
 *.in-text-selection,
@@ -22,17 +36,6 @@
 .CodeMirror-selected {
     background: var(--search-select-bg-color);
     text-shadow: none;
-}
-
-html {
-  font-size: 10pt;
-  font-family: "Computer Modern Serif", "Times New Roman", "serif" !important;
-}
-
-#write {
-  line-height: 140%;
-  font-size: 12pt;
-  background: white;
 }
 
 .file-list-item-summary {
@@ -51,7 +54,7 @@ html {
 /************* Editor *************/
 @media screen and (min-width: 800px) {
     #write {
-        padding: 15mm 20mm;
+        padding: 15mm 17mm;
         margin: 2% auto;
         max-width: 215.9mm;
         border: 1px #D3D3D3 dotted;
@@ -63,9 +66,12 @@ html {
 /************* Export *************/
 @page {
   size: letter;
+  margin: 15mm 0 auto;
+  padding: 15mm 0 auto;
 }
 
 @media print {
+
   hr {
     visibility: hidden;
     page-break-after: always;
@@ -76,11 +82,6 @@ html {
   hr + h4,
   hr + h5,
   hr + h6 {
-    margin-top: 0 !important;
-  }
-
-  #write h4 {
-    /* page-break-before: always; */
     margin-top: 0 !important;
   }
 
@@ -129,6 +130,7 @@ html {
     orphans: 3;
     widows: 3;
   }
+
 }
 
 /************* Header *************/
@@ -344,5 +346,5 @@ blockquote {
 /***********
  * Theme for Typora
  * David Duan, 2019
- * V1.0
+ * V2.0
  ***********/
